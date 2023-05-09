@@ -1,36 +1,57 @@
 <!DOCTYPE html>
 <html>
-  
-<head>
-    <!-- Include JS files -->
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <title>Simple BMI Calculator</title>
+    <link rel="stylesheet" href="styles.css" />
     <script src="app.js"></script>
-</head>
-  
-<body>
-    <div class="container">
-        <h1>BMI Calculator</h1>
-  
-        <!-- Option for providing height 
-            and weight to the user-->
-        <p>Height (in cm)</p>
-  
-        <input type="text" id="height">
-  
-        <p>Weight (in kg)</p>
-  
-        <input type="text" id="weight">
-  
-        <button id="btn">Calculate</button>
-  
-        <div id="result"></div>
-    </div>
-</body>
-<footer><br>
-    <br>
-    <br>
-    <br>
- Made by Ritik Malik
-</footer>
-  
+  </head>
+  <body>
+    <center>
+      <form id="bmi-form" onsubmit="return calcBMI();">
+        <div class="bmi-label">BMI Calculator</div>
+        <div class="bmi-row">
+          <label>
+            <input
+              type="radio"
+              id="bmi-metric"
+              name="bmi-measure"
+              onchange="measureBMI()"
+              checked
+            />
+            Metric
+          </label>
+          <label>
+            <input
+              type="radio"
+              id="bmi-imperial"
+              name="bmi-measure"
+              onchange="measureBMI()"
+            />
+            Imperial
+          </label>
+        </div>
+
+        <div class="bmi-label">
+          Weight (<span id="bmi-weight-unit">KG</span>):
+        </div>
+        <div class="bmi-row">
+          <input id="bmi-weight" type="number" min="1" max="635" required />
+        </div>
+
+        <div class="bmi-label">
+          Height (<span id="bmi-height-unit">CM</span>):
+        </div>
+        <div class="bmi-row">
+          <input id="bmi-height" type="number" min="54" max="272" required />
+        </div>
+
+        <input type="submit" value="Calculate BMI" />
+        <span id="bmi-results"></span>
+      </form>
+      <br />
+      <br />
+      <br />
+      <b> <i>Made by Ritik Malik</i></b>
+    </center>
+  </body>
 </html>

@@ -1,8 +1,44 @@
-body{
-    background-color: aqua;
-    text-align: center;
+/* (X) DOES NOT MATTER, COSMETICS */
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
 }
-footer{
-    font-style: italic;
-    margin: auto auto 40%;
+
+body {
+  background-color: #cfcfcf;
+}
+
+form {
+  margin-top: 5rem;
+  border-radius: 3%;
+}
+
+#bmi-form input[type="text"],
+#bmi-form input[type="number"] {
+  border: 1px solid #cfcfcf;
+  padding: 5px;
+}
+#bmi-form input[type="number"] {
+  width: 100%;
+}
+#bmi-form input[type="submit"] {
+  padding: 10px;
+  border: 0;
+  color: #fff;
+  background: #69da76;
+  cursor: pointer;
+}
+#bmi-form {
+  border: 1px solid #eee;
+  background: #f2f2f2;
+  padding: 20px;
+  max-width: 400px;
+}
+#bmi-form .bmi-label {
+  color: #00a8c3;
+  font-weight: 700;
+  margin: 10px 0;
+}
+#bmi-form .bmi-row {
+  margin-bottom: 20px;
 }
